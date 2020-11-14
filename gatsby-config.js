@@ -1,16 +1,68 @@
 module.exports = {
   siteMetadata: {
-    title: `My Blog`,
-    description: ` A blog about frontend development and other cool stuff.`,
-    author: `@gatsbyjs`,
+    title: `Stefany Sá`,
+    position: `Desenvolvedora Front End`,
+    description: `Colaboradora do CESAR e aspirante a dev FullStack. 
+    Escrevo coisas sobre front end e o universo JS, vida pessoal e outras 
+    coisas legais.`,
+    author: `@stefanyvasc`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    // permitindo a leitura dos arquivos da pasta img dentro de static
+    // precisa ser a primeira para funcionar com o gatsby-remark-images
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/static/assets/img`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    // permitindo a leitura dos arquivos da pasta posts
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
+      },
+    },
+
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: `uploads`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-lazy-load`,
+          {
+            resolve: "gatsby-remark-emoji", // <-- this adds emoji
+            options: {
+              emojiConversion: "shortnameToUnicode",
+              ascii: false,
+            },
+          },
+          // o prismjs deve sempre ir no final
+          `gatsby-remark-prismjs`,
+        ],
       },
     },
     `gatsby-transformer-sharp`,
