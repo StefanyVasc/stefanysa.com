@@ -64,5 +64,34 @@ const GlobalStyles = createGlobalStyle`
   	width: 100%;
   	height: auto;
   }
+
+  // css variables for themes
+
+  body.dark {
+    --borders: #38444d;
+    --texts: #8899a6;
+    --postsColor: #fff;
+    --highlight: #17bf63;
+    --light: #F6F997;
+    --mediumBackground:  #253341;
+    --recommendedBackground: #3d5466;
+    --background: #15202b;
+    --white: #fff;
+    --black: #222;
+  }
+
+  body.light {
+    --borders: #b6b7d599;
+    --texts: #555;
+    --postsColor: #23263b;
+    --highlight: #17bf63;
+    --light: #F6F997;
+    --mediumBackground: #c5c9e0 ;
+    --recommendedBackground: #f5f5fa;
+    --background:  #e9ebfb;
+    --white: #fff;
+    --black: #222;
+
+  }
 `
 export default GlobalStyles
