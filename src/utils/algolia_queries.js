@@ -1,7 +1,5 @@
-const postsQuery = `{
-  posts: allMarkdownRemark(
-    sort: { fields: frontmatter___date, order: DESC }
-  ) {
+const postQuery = `{
+  posts: allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }){
     edges {
       node {
         objectID: id
@@ -9,13 +7,13 @@ const postsQuery = `{
           slug
         }
         frontmatter {
+          title
           category
           date_timestamp: date
           date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
           description
-          title
         }
-        excerpt(pruneLenght: 5000)
+        excerpt(pruneLength: 5000)
       }
     }
   }
@@ -29,15 +27,14 @@ const flatten = arr =>
     ),
     ...rest,
   }))
+const settings = { attributesToSnippet: [`excerpt:20`] }
 
 const queries = [
   {
-    query: postsQuery,
+    query: postQuery,
     transformer: ({ data }) => flatten(data.posts.edges),
-    indexName: "Posts",
-    settings: {
-      attributesToSnippets: ["excerpt: 20"],
-    },
+    indexName: `Posts`,
+    settings,
   },
 ]
 
