@@ -10,7 +10,7 @@ const Hit = ({ hit }) => (
     category={hit.category}
     color={hit.color}
     background={hit.background}
-    timeToRead={hit.timeToRead}
+    timeToRead={`${hit.timeToRead} min`}
   />
 )
 

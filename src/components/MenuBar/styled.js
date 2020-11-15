@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { LightBulb } from "./index"
 
 export const MenuBarWrapper = styled.aside`
   align-items: center;
