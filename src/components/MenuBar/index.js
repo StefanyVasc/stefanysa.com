@@ -1,15 +1,21 @@
-import { ArrowUp, Grid, Home, Search } from "@styled-icons/feather"
+import { ArrowUp, Grid, Home, Search, List } from "@styled-icons/feather"
 import { LightBulb } from "@styled-icons/octicons"
 import React, { useState, useEffect } from "react"
 import * as S from "./styled"
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
+  const [display, setDisplay] = useState(null)
+
   const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
 
   useEffect(() => {
     setTheme(window.__theme)
+    setDisplay(window.__display)
+
     window.__onThemeChange = () => setTheme(window.__theme)
+    window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
 
   return (
@@ -38,9 +44,16 @@ const MenuBar = () => {
         >
           <LightBulb />
         </S.MenuBarItem>
-        <S.MenuBarItem title="Mudar tipo de visualização">
-          <Grid />
+
+        <S.MenuBarItem
+          title="Mudar tipo de visualização"
+          onClick={() => {
+            window.__setPreferredDisplay(isListMode ? "grid" : "list")
+          }}
+        >
+          {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
+
         <S.MenuBarItem title="Ir para o topo">
           <ArrowUp />
         </S.MenuBarItem>
