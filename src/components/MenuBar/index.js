@@ -1,6 +1,6 @@
-import { ArrowUp, Grid, Home, Search, List } from "@styled-icons/feather"
+import { ArrowUp, Grid, Home, List, Search } from "@styled-icons/feather"
 import { LightBulb } from "@styled-icons/octicons"
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import * as S from "./styled"
 
 const MenuBar = () => {
@@ -50,6 +50,7 @@ const MenuBar = () => {
           onClick={() => {
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}
+          className="display"
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
