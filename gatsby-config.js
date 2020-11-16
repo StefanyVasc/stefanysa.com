@@ -6,9 +6,9 @@ const queries = require("./src/utils/algolia_queries")
 module.exports = {
   siteMetadata: {
     title: `Stefany Sá`,
-    position: `Desenvolvedora Front End`,
-    description: `Colaboradora do CESAR e aspirante a dev FullStack. 
-    Escrevo coisas sobre front end e o universo JS, vida pessoal e outras 
+    position: `Desenvolvedora Front-End`,
+    description: `Colaboradora do CESAR e aspirante a Dev Full Stack. 
+    Escrevo coisas sobre front-end e o universo JS, vida pessoal e outras 
     coisas legais.`,
     author: `@stefanyvasc`,
   },
