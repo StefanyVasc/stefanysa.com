@@ -26,13 +26,7 @@ module.exports = {
         path: `${__dirname}/static/assets/img`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+
     // permitindo a leitura dos arquivos da pasta posts
     {
       resolve: `gatsby-source-filesystem`,
