@@ -2,9 +2,10 @@ import {
   ArrowLeftOutline,
   ArrowRightOutline,
 } from "@styled-icons/evaicons-outline"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import propTypes from "prop-types"
 import React from "react"
+import getThemeColor from "../../utils/getThemeColor"
 import * as S from "./styled"
 
 const Pagination = ({
@@ -17,19 +18,25 @@ const Pagination = ({
 }) => (
   <S.PaginationWrapper>
     {!isFirst && (
-      <Link to={prevPage}>
+      <AniLink cover direction="left" duration={0.5} bg="#15202b" to={prevPage}>
         <ArrowLeftOutline size="36" /> página anterior
-      </Link>
+      </AniLink>
     )}
     <p>
       {currentPage} de {numPages}
     </p>
     {!isLast && (
-      <Link to={nextPage}>
+      <AniLink
+        cover
+        direction="right"
+        duration={0.5}
+        bg={getThemeColor()}
+        to={nextPage}
+      >
         {" "}
         próxima página
         <ArrowRightOutline size="36" />
-      </Link>
+      </AniLink>
     )}
   </S.PaginationWrapper>
 )
