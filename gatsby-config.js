@@ -13,6 +13,7 @@ module.exports = {
     author: `@stefanyvasc`,
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     // permitindo a leitura dos arquivos da pasta img dentro de static
