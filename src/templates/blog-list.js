@@ -1,10 +1,10 @@
 import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
+import * as S from "../components/ListWrapper/styled"
 import Pagination from "../components/Pagination"
 import PostItem from "../components/PostItem"
 import SEO from "../components/seo"
-import * as S from "../components/ListWrapper/styled"
 
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges

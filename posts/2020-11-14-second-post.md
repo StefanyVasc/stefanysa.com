@@ -5,6 +5,7 @@ description: Here we go for the second post
 category: Misc
 background: "#4FFF9E"
 color: ''
+image: "/assets/img/desert.jpg"
 ---
 
 # Lorem ipsum

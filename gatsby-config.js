@@ -11,6 +11,7 @@ module.exports = {
     Escrevo coisas sobre front-end e o universo JS, vida pessoal e outras 
     coisas legais.`,
     author: `@stefanyvasc`,
+    siteUrl: `https://stefanysa.com.br`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
