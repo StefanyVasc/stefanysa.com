@@ -1,6 +1,7 @@
 import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
+import * as S from "../components/ListWrapper/styled"
 import Pagination from "../components/Pagination"
 import PostItem from "../components/PostItem"
 import SEO from "../components/seo"
@@ -17,34 +18,37 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      {postList.map(
-        ({
-          node: {
-            fields: { slug },
-            frontmatter: {
-              background,
-              category,
-              date,
-              description,
-              title,
-              color,
+      <S.ListWrapper>
+        {postList.map(
+          ({
+            node: {
+              fields: { slug },
+              frontmatter: {
+                background,
+                category,
+                date,
+                description,
+                title,
+                color,
+              },
+              timeToRead,
             },
-            timeToRead,
-          },
-        }) => (
-          <PostItem
-            key={date}
-            slug={slug}
-            category={category}
-            date={date}
-            timeToRead={`${timeToRead} minuto(s) de leitura`}
-            title={title}
-            description={description}
-            background={background}
-            color={color}
-          />
-        )
-      )}
+          }) => (
+            <PostItem
+              key={date}
+              slug={slug}
+              category={category}
+              date={date}
+              timeToRead={`${timeToRead} minuto(s) de leitura`}
+              title={title}
+              description={description}
+              background={background}
+              color={color}
+            />
+          )
+        )}
+      </S.ListWrapper>
+
       <Pagination
         isFirst={isFirst}
         isLast={isLast}

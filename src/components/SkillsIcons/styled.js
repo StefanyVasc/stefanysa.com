@@ -1,29 +1,26 @@
 import styled from "styled-components"
-import media from "styled-media-query"
 
-export const SocialLinksWrapper = styled.nav`
+export const SkillsIconsWrapper = styled.nav`
   margin: 2rem auto;
   width: 100%;
-
-  ${media.lessThan("large")`
-    display: none;
-  `}
 `
 
-export const SocialLinksList = styled.ul`
+export const SkillsIconsList = styled.ul`
   align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   list-style: none !important;
 `
 
-export const SocialLinksItem = styled.li``
+export const SkillsIconsItem = styled.li`
+  margin-right: 3rem;
+`
 
-export const SocialLinksLink = styled.a`
+export const SkillsIconsLink = styled.a`
   color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
-
   &:hover {
     color: var(--highlight);
   }
