@@ -11,6 +11,7 @@ module.exports = {
     Escrevo coisas sobre front-end e o universo JS, vida pessoal e outras 
     coisas legais.`,
     author: `@stefanyvasc`,
+    siteUrl: `https://stefanysa.com.br`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
@@ -96,6 +97,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
