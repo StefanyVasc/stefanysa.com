@@ -1,6 +1,7 @@
 import { ArrowUp, Grid, Home, List, Search } from "@styled-icons/feather"
 import { LightBulb } from "@styled-icons/octicons"
 import React, { useEffect, useState } from "react"
+import getThemeColor from "../../utils/getThemeColor"
 import * as S from "./styled"
 
 const MenuBar = () => {
@@ -25,7 +26,7 @@ const MenuBar = () => {
           cover
           direction="right"
           duration={0.5}
-          bg="#15202b"
+          bg={getThemeColor()}
           to="/"
           title="Voltar para Home"
         >
@@ -38,7 +39,7 @@ const MenuBar = () => {
           cover
           direction="right"
           duration={0.5}
-          bg="#15202b"
+          bg={getThemeColor()}
           to="/search/"
           title="Pesquisar"
         >
