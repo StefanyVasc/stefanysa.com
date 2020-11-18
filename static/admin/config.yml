@@ -1,12 +1,17 @@
 backend:
   name: github
-  repository: StefanyVasc/stefanysa.com
+  repo: StefanyVasc/stefanysa.com
   branch: master # Branch to update (optional; defaults to master)
-  site_domain: https://stefanysa.netlify.app
+  site_domain: stefanysa.netlify.app
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
 public_folder: "assets/img"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
@@ -21,14 +26,58 @@ collections:
           label: "Date",
           name: "date",
           widget: "datetime",
-          format: " 'YYYY-MM-DD hh:mm:ss'",
+          format: "YYYY-MM-DD hh:mm:ss",
         }
-      - { label: "Image", name: "thumbnail", widget: "image" }
+      - { label: "Image", name: "image", widget: "image" }
       - {
           label: "Category",
           name: "category",
           widget: "select",
           options:
-            ["html", "css", "sass", "react", "node", "native", "git", "dev"],
+            [
+              "html",
+              "css",
+              "sass",
+              "js",
+              "react",
+              "node",
+              "mobile",
+              "git",
+              "dev",
+              "dados",
+              "off",
+              "misc",
+            ],
+        }
+      - {
+          label: "Background",
+          name: "background",
+          widget: "select",
+          options:
+            [
+              { label: "Laranja", value: "#F98313" },
+              { label: "Azul claro", value: "#009FFF" },
+              { label: "Rosa Claro", value: "#FF90AB" },
+              { label: "Amarelo", value: "#F9FB02" },
+              { label: "Azul escuro", value: "#2600FF" },
+              { label: "Verde", value: "#3DC207" },
+              { label: "Roxo", value: "#7D24AF" },
+              { label: "Vermelho", value: "#F81D07" },
+              { label: "Rosa pink", value: "#F60069" },
+              { label: "Lilás", value: "#A88CF1" },
+              { label: "Verde piscina", value: "#4FFF9E" },
+            ],
+        }
+      - {
+          label: "Color",
+          name: "color",
+          widget: "select",
+          options:
+            [
+              { label: Preto, value: "#000000" },
+              { label: Branco, value: "#FFFFFF" },
+              { label: Cinza, value: "#6E8787" },
+              { label: Bege, value: "#FBFBDD" },
+            ],
         }
       - { label: "Body", name: "body", widget: "markdown" }
