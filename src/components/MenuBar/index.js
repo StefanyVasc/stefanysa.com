@@ -70,7 +70,10 @@ const MenuBar = () => {
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
 
-        <S.MenuBarItem title="Ir para o topo">
+        <S.MenuBarItem
+          title="Ir para o topo"
+          onClick={() => window.scroll({ top: 0, behavior: "smooth" })}
+        >
           <ArrowUp />
         </S.MenuBarItem>
       </S.MenuBarGroup>
