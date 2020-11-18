@@ -5,6 +5,7 @@ description: Ahh e tem a série também, pelo canal da FOX.
 category: MISC
 background: "#A88CF1"
 color: ''
+image: "/assets/img/desert.jpg"
 ---
 
 # Lorem ipsum

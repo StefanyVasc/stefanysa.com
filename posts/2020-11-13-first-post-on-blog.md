@@ -5,6 +5,7 @@ description: This is the first post of many in this blog.
 category: Misc
 background: "#4FFF9E"
 color: '#000'
+image: "/assets/img/desert.jpg"
 ---
 
 # Lorem ipsum
