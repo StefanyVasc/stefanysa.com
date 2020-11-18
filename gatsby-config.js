@@ -11,7 +11,7 @@ module.exports = {
     Escrevo coisas sobre front-end e o universo JS, vida pessoal e outras 
     coisas legais.`,
     author: `@stefanyvasc`,
-    siteUrl: `https://stefanysa.tech`,
+    siteUrl: `https://stefanysa.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
@@ -95,5 +95,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify-cms`,
   ],
 }
