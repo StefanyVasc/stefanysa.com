@@ -30,9 +30,10 @@ const AboutPage = () => (
         <Link to="https://www.cesar.org.br" target="__blank">
           CESAR{" "}
         </Link>
-        como Consultora de Qualificação e Front-End Developer. Sou formada em{" "}
-        <strong>Eletromecânica</strong> pelo SENAI (2012) e estou na reta final
-        da graduação em <strong>Sistemas de Informação</strong> pela UFRPE.
+        como Consultora de Qualificação e sou Front End Developer (Aspirante a
+        Dev Full Stack). Sou formada em <strong>Eletromecânica</strong> pelo
+        SENAI (2012) e estou na reta final da graduação em{" "}
+        <strong>Sistemas de Informação</strong> pela UFRPE.
       </p>
       <p>
         No meu tempo livre, eu gosto de tocar instrumentos de corda (Violão,
