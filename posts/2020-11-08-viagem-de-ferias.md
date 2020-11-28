@@ -5,7 +5,7 @@ description: Quem disse que Dev não tira férias?!
 category: MISC
 background: "#F60069"
 color: ''
-image: "/assets/img/desert.jpg"
+image: "/assets/img/cover.png"
 ---
 
 # Lorem ipsum
@@ -17,7 +17,7 @@ a=3
 puts a
 ```
 
-![](/assets/img/desert.jpg)
+
 
 ## Fusce a metus eu
 
