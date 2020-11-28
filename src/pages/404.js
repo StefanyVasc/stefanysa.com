@@ -6,7 +6,7 @@ import GlobalStyles from "../styles/global"
 
 const Container = styled.section`
   align-items: center;
-  background-image: url("https://willianjusten.com.br/assets/img/john-404.gif");
+  background-image: url("https://media.giphy.com/media/Oj5I04j19PNJeV9g1R/giphy.gif");
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 800px;
@@ -64,7 +64,7 @@ const NotFoundPage = () => (
     <SEO title="404: Not found" />
     <GlobalStyles />
     <Title>404</Title>
-    <Text>Ué? Cadê? Parece que não tem o que você procura.</Text>
+    <Text>Ué? Cadê?...Eita! parece que não tem o que você procura.</Text>
     <Button to="/">De volta ao blog!</Button>
   </Container>
 )
