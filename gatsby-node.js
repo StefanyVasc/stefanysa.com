@@ -68,11 +68,11 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
           previous {
-            fields {
-              slug
-            }
             frontmatter {
               title
+            }
+            fields {
+              slug
             }
           }
         }

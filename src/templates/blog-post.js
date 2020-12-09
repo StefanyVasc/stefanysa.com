@@ -7,31 +7,28 @@ import RecommendedPosts from "../components/RecommendedPosts"
 import SEO from "../components/seo"
 
 const BlogPost = ({ data, pageContext }) => {
-  const post = data.markdownRemark
+  const { title, description, date, image } = data.markdownRemark.frontmatter
+  const { timeToRead, html, fields } = data.markdownRemark
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
 
   return (
     <Layout>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        image={post.frontmatter.image}
-      />
+      <SEO title={title} description={description} image={image} />
       <S.PostHeader>
         <S.PostDate>
-          {post.frontmatter.date} • {post.timeToRead} min de leitura
+          {date} • {timeToRead} min de leitura
         </S.PostDate>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
+        <S.PostTitle>{title}</S.PostTitle>
+        <S.PostDescription>{description}</S.PostDescription>
       </S.PostHeader>
       <S.MainContent>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        <div dangerouslySetInnerHTML={{ __html: html }}></div>
       </S.MainContent>
 
       <RecommendedPosts next={next} previous={previous} />
 
-      <Comments url={post.fields.slug} title={post.frontmatter.title} />
+      <Comments url={fields.slug} title={title} />
     </Layout>
   )
 }
