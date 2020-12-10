@@ -22,7 +22,7 @@ const AboutPage = () => (
           </span>
           ...
         </p>
-        ...Olá me Stefany Vasconcelos de Sá, sou de Recife-PE{" "}
+        ...Olá, me chamo Stefany Vasconcelos de Sá, sou de Recife-PE{" "}
         <span role="img" aria-label="coqueiro">
           🌴
         </span>
