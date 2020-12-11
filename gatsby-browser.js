@@ -2,6 +2,7 @@ import "lazysizes"
 import React from "react"
 import ReactDOM from "react-dom"
 import SwUpdater from "./src/components/SwUpdater"
+
 require("prismjs/themes/prism-okaidia.css")
 
 function onServiceWorkerUpdateReady() {
