@@ -11,15 +11,11 @@ color: "#FFFFFF"
 
 Oi galera 👋! Aqui vamos pro último post de 2020. Nesse post vou abordar a propriedade position suas particularidades e comportamentos. A principio a propriedade position pode assumir os valores: static, absolute, fixed, relative e sticky. Vamos entender um pouco sobre cada valor desses.
 
-
-
 ## position: static;
 
 * Essa é o valor padrão, já vem por default e não é necessário declará-la, a não ser que você queira mudar o tipo de position.
 * Ele não muda em nada o comportamento padrão do elemento.
 * Com a *`position:static`* não adianta definir as propriedades : *`top, bottom, left e right`* pois ela simplesmente não mudará de lugar.
-
-
 
 ## position: absolute;
 
@@ -27,20 +23,16 @@ Oi galera 👋! Aqui vamos pro último post de 2020. Nesse post vou abordar a pr
 
 * Quando definido cria um novo contexto que fica a frente do browser.
 * Logo, a div com *`position:absolute`* referencia sua posição pelo div mais próximo que o envolve e que também tenha um position definido, caso não haja essa div, a div filha irá se referenciar pelo body.
-* Podemos movimentar a div (ou outro elemento) com os atributos: *t`op`*`, `*`right`* e *`left.`*
+* Podemos movimentar a div (ou outro elemento) com os atributos: *t`op`*`,`*`right`* e *`left.`*
 
 ![position absolute exemplo](/assets/img/position-absolute-post.png "exemplo position:absolute")
 
 Nesse esquema temos duas *divs:* uma com a *class `.green`* e outra com a *class `.blue`*. Na primeira situação podemos ver que somente a *div* com a *class `.green`* recebe a propriedade *`position:absolute`* e como resultado temos que a *div `.green`* vai para um contexto a frente do contexto da *div `.blue`* a *div* que tem a *class `.blue`* sobe para ocupar o restante do espaço do contexto do browser. Na segunda situação é mostrado que ao se colocar *`position:absolute`* nas duas *divs*, ambas flutuam num contexto diferente do contexto do browser.
 
-
-
 ## position: fixed;
 
 * O elemento fica fixo na tela, mesmo rolando a página. Tomando como base o ponto superior esquerdo do browser. (Muito usado para deixar o header fixo nos sites)
 * É semelhante ao *`position:absolute`*, porém com a diferença de que o elemento pai sempre será o body.
-
-
 
 ## position: relative;
 
@@ -52,8 +44,6 @@ Nesse esquema temos duas *divs:* uma com a *class `.green`* e outra com a *class
 
 * O deslocamento não afeta outros elementos, portanto um elemento pode ficar em cima do outro(dois elementos podem ocupar o mesmo espaço ou parcelas do mesmo espaço).
 
-
-
 ![atributos](/assets/img/atributos.png "atributos: top, left, right e bottom")
 
 * **OBS:** Se eu quiser deslocar o elemento para a direção da direita eu preciso dar um valor ao *left*, porque ele vai aplicar esse valor na sua própria região do *left* deslocando assim o elemento para a direita.
@@ -62,7 +52,9 @@ Nesse esquema temos duas *divs:* uma com a *class `.green`* e outra com a *class
 
 > É uma mistura entre *`position:relative`* e *`position:fixed`*, onde o elemento irá se comportar uma hora como *`position:relative`*, em outra como *`position:fixed`*
 
-* Aceita as propriedades top, *left*, *right* e *bottom*.
+* Aceita as propriedades *top*, *left*, *right* e *bottom*.
+
+
 
 
 
