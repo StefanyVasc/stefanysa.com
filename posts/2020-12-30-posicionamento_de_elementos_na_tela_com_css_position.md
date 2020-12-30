@@ -60,7 +60,7 @@ Nesse esquema temos duas *divs:* uma com a *class `.green`* e outra com a *class
 
 ## Conclusão
 
-Chegamos ao fim do último post de 2020 🙌
+Chegamos ao fim do último post de 2020 🙌 espero ter te ajudado em algo.
 
 Se você sabe algo a mais sobre o *`position`* que eu esqueci de falar, por favor não deixe de colocar nos comentários, sempre é bom aprender mais. Dúvidas também são legais, não deixe de perguntar seja no comentário ou se preferir pode me adicionar nas redes sociais.
 
