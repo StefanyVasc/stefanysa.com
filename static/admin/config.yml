@@ -5,8 +5,8 @@ backend:
   site_domain: stefanysa.netlify.app
 
 publish_mode: editorial_workflow
-media_folder: "static/assets/img"
-public_folder: "/assets/img"
+media_folder: static/assets/img
+public_folder: /assets/img
 
 slug:
   encoding: "ascii"

@@ -33,6 +33,13 @@ module.exports = {
         path: `${__dirname}/posts`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
 
     {
       resolve: `gatsby-transformer-remark`,
@@ -52,6 +59,7 @@ module.exports = {
             },
           },
           `gatsby-remark-lazy-load`,
+          `gatsby-remark-prismjs`,
           {
             resolve: "gatsby-remark-emoji", // <-- this adds emoji
             options: {
@@ -60,7 +68,6 @@ module.exports = {
             },
           },
           // o prismjs deve sempre ir no final
-          `gatsby-remark-prismjs`,
         ],
       },
     },
