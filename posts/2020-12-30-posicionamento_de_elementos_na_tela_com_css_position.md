@@ -23,7 +23,7 @@ Oi galera 👋! Aqui vamos pro último post de 2020. Nesse post vou abordar a pr
 
 * Quando definido cria um novo contexto que fica a frente do browser.
 * Logo, a div com *`position:absolute`* referencia sua posição pelo div mais próximo que o envolve e que também tenha um position definido, caso não haja essa div, a div filha irá se referenciar pelo body.
-* Podemos movimentar a div (ou outro elemento) com os atributos: *t`op`*`,`*`right`* e *`left.`*
+* Podemos movimentar a div (ou outro elemento) com os atributos: *`top`, `bottom`, `left` e `right.`*
 
 ![position absolute exemplo](/assets/img/position-absolute-post.png "exemplo position:absolute")
 
@@ -38,7 +38,7 @@ Nesse esquema temos duas *divs:* uma com a *class `.green`* e outra com a *class
 
 > O *`position:relative`* faz referência a **ele mesmo**. Ou seja, o seu ponto inicial é o seu próprio canto superior esquerdo.
 
-* Assim como no *`position:absolute`* é possível movimentar a div (ou outro elemento) com os atributos: *`top`* e *`left.`*
+* Assim como no *`position:absolute`* é possível movimentar a div (ou outro elemento) com os atributos: *`top`, `bottom`, `left` e `right`. No caso  do exemplo abaixo usaremos o `top` e `left.`*
 
 ![exemplo position relative](/assets/img/position-relative-post.png "exemplo position relative")
 
@@ -52,11 +52,7 @@ Nesse esquema temos duas *divs:* uma com a *class `.green`* e outra com a *class
 
 > É uma mistura entre *`position:relative`* e *`position:fixed`*, onde o elemento irá se comportar uma hora como *`position:relative`*, em outra como *`position:fixed`*
 
-* Aceita as propriedades *top*, *left*, *right* e *bottom*.
-
-
-
-
+* Aceita as propriedades *`top`, `bottom`, `left` e `right`*.
 
 ## Conclusão
 
