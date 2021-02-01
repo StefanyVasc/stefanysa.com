@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Stefany Sá`,
     position: `UI Developer`,
-    description: `Escrevo sobre front end e o universo JavaScript, vida pessoal e outras coisas legais.`,
+    description: `Escrevo sobre front-end e o universo JavaScript, vida pessoal e outras coisas legais.`,
     author: `@stefanyvasc`,
     siteUrl: `https://stefanysa.netlify.app`,
   },
